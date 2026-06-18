@@ -59,9 +59,9 @@ function WhatsAppIcon({ className }: { className?: string }) {
 function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-noir/60 border-b border-white/5">
-      <div className="mx-auto max-w-7xl px-5 md:px-10 h-16 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-5 md:px-10 h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
-          <img src={logo} alt="Sensaciones de Tango" className="h-12 w-auto" />
+          <img src={logo} alt="Sensaciones de Tango" className="h-16 w-auto" />
         </a>
         <nav className="hidden md:flex items-center gap-9 text-[11px] uppercase tracking-[0.28em] text-white/70">
           <a href="#show" className="hover:text-ambar transition-colors">Show</a>
@@ -597,7 +597,7 @@ function Footer() {
     <footer className="bg-noir border-t border-white/5">
       <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-3 gap-10">
         <div>
-          <img src={logo} alt="Sensaciones de Tango" className="h-20 w-auto" />
+          <img src={logo} alt="Sensaciones de Tango" className="h-28 w-auto" />
           <p className="mt-6 text-white/58 text-sm leading-relaxed max-w-xs">
             Vive el tango donde nació. Un espectáculo íntimo en el corazón del Café Tortoni.
           </p>
