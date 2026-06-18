@@ -17,12 +17,13 @@ import {
 
 import logo from "@/assets/logo.webp";
 import hero from "@/assets/hero.jpg";
-import artist1 from "@/assets/artist-1.jpg";
-import artist2 from "@/assets/artist-2.jpg";
-import artist3 from "@/assets/artist-3.jpg";
-import artist4 from "@/assets/artist-4.jpg";
-import artist5 from "@/assets/artist-5.jpg";
-import artist6 from "@/assets/artist-6.jpg";
+import showMain from "@/assets/show-main.jpg";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
 
 const TICKETS = "https://tickets.sensacionesdetango.com/";
 const WHATSAPP = "https://wa.me/5491150108040?text=LP%20COMPRAR%20TICKET";
@@ -286,7 +287,7 @@ function Show() {
             style={{ background: "var(--grad-passion)" }}
           />
           <img
-            src={artist1}
+            src={showMain}
             alt="Bailarines en el Café Tortoni"
             className="relative rounded-lg w-full h-[520px] object-cover"
             style={{ boxShadow: "var(--shadow-elev-3)" }}
@@ -559,7 +560,7 @@ function Payments() {
 }
 
 function Gallery() {
-  const photos = [artist2, artist3, artist4, artist5, artist6, artist1];
+  const photos = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
   return (
     <section className="section-pad bg-surface">
       <div className="mx-auto max-w-7xl px-6">
