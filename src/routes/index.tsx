@@ -24,6 +24,8 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import gallery7 from "@/assets/gallery-7.jpg";
+import gallery8 from "@/assets/gallery-8.jpg";
 
 const TICKETS = "https://tickets.sensacionesdetango.com/";
 const WHATSAPP = "https://wa.me/5491150108040?text=LP%20COMPRAR%20TICKET";
@@ -560,7 +562,16 @@ function Payments() {
 }
 
 function Gallery() {
-  const photos = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
+  const photos = [
+    { src: gallery1, pos: "object-center" },
+    { src: gallery2, pos: "object-top" },
+    { src: gallery3, pos: "object-top" },
+    { src: gallery4, pos: "object-center" },
+    { src: gallery5, pos: "object-center" },
+    { src: gallery6, pos: "object-center" },
+    { src: gallery7, pos: "object-top" },
+    { src: gallery8, pos: "object-center" },
+  ];
   return (
     <section className="section-pad bg-surface">
       <div className="mx-auto max-w-7xl px-6">
@@ -579,9 +590,9 @@ function Gallery() {
               style={{ boxShadow: "var(--shadow-elev-2)" }}
             >
               <img
-                src={p}
+                src={p.src}
                 alt={`Artista ${i + 1}`}
-                className={`w-full ${i === 0 ? "h-[400px] md:h-[640px]" : "h-[260px] md:h-[310px]"} object-cover transition-transform duration-700 group-hover:scale-105`}
+                className={`w-full ${i === 0 ? "h-[400px] md:h-[640px]" : "h-[260px] md:h-[310px]"} object-cover ${p.pos} transition-transform duration-700 group-hover:scale-105`}
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-noir/70 via-transparent to-transparent" />
