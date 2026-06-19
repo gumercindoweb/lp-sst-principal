@@ -15,6 +15,7 @@ import {
   Youtube,
   Menu as MenuIcon,
   X,
+  AlertCircle,
 } from "lucide-react";
 
 import logo from "@/assets/logo.webp";
@@ -469,6 +470,17 @@ function Schedule() {
           </div>
         </div>
 
+        <div className="mt-8 max-w-3xl mx-auto rounded-lg bg-noir/40 border border-white/5 p-6">
+          <p className="eyebrow !text-[10px] !tracking-[0.28em] mb-3">Dois espaços do Café Tortoni</p>
+          <p className="text-white/75 text-sm leading-relaxed">
+            Os espetáculos das 18:00 e 20:00 hs. acontecem nas{" "}
+            <span className="text-ambar">adegas históricas do subsolo</span>—espaços íntimos
+            com acesso apenas por escadas. O espetáculo das 19:00 hs. (sextas, sábados e
+            feriados) acontece no <span className="text-ambar">salão principal</span> ao nível
+            da rua, e é o único indicado para pessoas com mobilidade reduzida.
+          </p>
+        </div>
+
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a
             href={TICKETS}
@@ -755,6 +767,14 @@ function Info() {
               {
                 icon: <Users size={18} />,
                 t: "Capacidade limitada — 80 pessoas por sessão.",
+              },
+              {
+                icon: <Users size={18} />,
+                t: "O espetáculo das 19:00 hs. no salão principal é o único indicado para pessoas com mobilidade reduzida (acesso ao nível da rua).",
+              },
+              {
+                icon: <AlertCircle size={18} />,
+                t: "Os ingressos não são reembolsáveis e não admitem alterações após a confirmação da compra.",
               },
             ].map((x, i) => (
               <li key={i} className="flex items-start gap-4">

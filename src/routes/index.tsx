@@ -15,6 +15,7 @@ import {
   Youtube,
   Menu as MenuIcon,
   X,
+  AlertCircle,
 } from "lucide-react";
 
 import logo from "@/assets/logo.webp";
@@ -304,6 +305,17 @@ function Schedule() {
           </div>
         </div>
 
+        <div className="mt-8 max-w-3xl mx-auto rounded-lg bg-noir/40 border border-white/5 p-6">
+          <p className="eyebrow !text-[10px] !tracking-[0.28em] mb-3">Dos espacios del Café Tortoni</p>
+          <p className="text-white/75 text-sm leading-relaxed">
+            Las funciones de las 18:00 y 20:00 hs. se realizan en las{" "}
+            <span className="text-ambar">bodegas históricas del subsuelo</span>—espacios íntimos
+            con acceso por escaleras. La función de las 19:00 hs. (viernes, sábados y feriados)
+            se realiza en el <span className="text-ambar">salón principal</span> a nivel calle
+            y es la única apta para personas con movilidad reducida.
+          </p>
+        </div>
+
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a href={TICKETS} target="_blank" rel="noreferrer" className="btn-primary">
             Elegir fecha y comprar online
@@ -528,6 +540,8 @@ function Info() {
               { icon: <MapPin size={18} />, t: "Av. de Mayo 825, Buenos Aires." },
               { icon: <Clock size={18} />, t: "Ingreso 45 min antes del show." },
               { icon: <Users size={18} />, t: "Capacidad limitada — 80 personas por función." },
+              { icon: <Users size={18} />, t: "Función de las 19:00 hs. en el salón principal — única apta para personas con movilidad reducida (acceso a nivel calle)." },
+              { icon: <AlertCircle size={18} />, t: "Las entradas no son reembolsables ni admiten cambios una vez confirmada la compra." },
             ].map((x, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span className="text-ambar mt-1">{x.icon}</span>

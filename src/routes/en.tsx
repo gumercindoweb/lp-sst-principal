@@ -15,6 +15,7 @@ import {
   Youtube,
   Menu as MenuIcon,
   X,
+  AlertCircle,
 } from "lucide-react";
 
 import logo from "@/assets/logo.webp";
@@ -466,6 +467,17 @@ function Schedule() {
           </div>
         </div>
 
+        <div className="mt-8 max-w-3xl mx-auto rounded-lg bg-noir/40 border border-white/5 p-6">
+          <p className="eyebrow !text-[10px] !tracking-[0.28em] mb-3">Two spaces at Café Tortoni</p>
+          <p className="text-white/75 text-sm leading-relaxed">
+            The 18:00 and 20:00 shows take place in the{" "}
+            <span className="text-ambar">historic wine cellars</span> in the basement—intimate
+            spaces accessible by stairs only. The 19:00 show (Fridays, Saturdays and holidays)
+            is held in the <span className="text-ambar">main hall</span>, at street level,
+            and is the only one suitable for guests with reduced mobility.
+          </p>
+        </div>
+
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a
             href={TICKETS}
@@ -753,6 +765,14 @@ function Info() {
               {
                 icon: <Users size={18} />,
                 t: "Limited capacity — 80 seats per show.",
+              },
+              {
+                icon: <Users size={18} />,
+                t: "The 19:00 show in the main hall is the only one accessible for guests with reduced mobility (street-level access).",
+              },
+              {
+                icon: <AlertCircle size={18} />,
+                t: "Tickets are non-refundable and cannot be modified once the purchase is confirmed.",
               },
             ].map((x, i) => (
               <li key={i} className="flex items-start gap-4">
