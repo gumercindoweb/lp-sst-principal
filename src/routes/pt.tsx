@@ -252,15 +252,15 @@ function Hero() {
         <p className="eyebrow mb-6">
           Café Tortoni · Buenos Aires · Desde 1858
         </p>
-        <h1 className="display text-5xl sm:text-6xl md:text-8xl text-white">
+        <h1 className="display text-4xl sm:text-6xl md:text-8xl text-white">
           Viva o tango
           <br />
           <span className="text-pasion">onde ele nasceu</span>
         </h1>
-        <p className="script text-4xl md:text-5xl mt-4">a história</p>
+        <p className="script text-3xl md:text-5xl mt-4">a história</p>
         <p className="mt-8 max-w-xl mx-auto text-white/82 text-lg leading-relaxed">
           Contada com corpo e alma, no canto mais emblemático de Buenos Aires.
-          Bailarinos, bandoneón e voz, a centímetros da sua mesa.
+          Bailarinos, bandoneón e voz, perto da sua mesa.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
@@ -556,6 +556,34 @@ function Show() {
               Prefere a gente resolver juntos?
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function VideoShow() {
+  return (
+    <section className="section-pad bg-surface">
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="text-center mb-10">
+          <p className="eyebrow mb-4">O show em ação</p>
+          <h2 className="display text-3xl md:text-5xl">
+            Veja como é{" "}
+            <span className="text-pasion">uma noite no Tortoni</span>
+          </h2>
+        </div>
+        <div
+          className="relative aspect-video rounded-lg overflow-hidden"
+          style={{ boxShadow: "var(--shadow-elev-3)" }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/IdSkcKQpzwU"
+            title="Sensaciones de Tango — Show de Tango no Café Tortoni"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full border-0"
+          />
         </div>
       </div>
     </section>
@@ -1005,6 +1033,7 @@ function LandingPT() {
       <Reviews />
       <Schedule />
       <Show />
+      <VideoShow />
       <Consumos />
       <Guide />
       <Info />

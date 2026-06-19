@@ -253,15 +253,15 @@ function Hero() {
         <p className="eyebrow mb-6">
           Café Tortoni · Buenos Aires · Since 1858
         </p>
-        <h1 className="display text-5xl sm:text-6xl md:text-8xl text-white">
+        <h1 className="display text-4xl sm:text-6xl md:text-8xl text-white">
           Experience tango
           <br />
           <span className="text-pasion">where it was born</span>
         </h1>
-        <p className="script text-4xl md:text-5xl mt-4">the story</p>
+        <p className="script text-3xl md:text-5xl mt-4">the story</p>
         <p className="mt-8 max-w-xl mx-auto text-white/82 text-lg leading-relaxed">
           Told with body and soul, in the most iconic corner of Buenos Aires.
-          Dancers, bandoneón and voice, inches from your table.
+          Dancers, bandoneón and voice, right by your table.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
@@ -554,6 +554,34 @@ function Show() {
               Prefer we sort it out together?
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function VideoShow() {
+  return (
+    <section className="section-pad bg-surface">
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="text-center mb-10">
+          <p className="eyebrow mb-4">The show in action</p>
+          <h2 className="display text-3xl md:text-5xl">
+            See what{" "}
+            <span className="text-pasion">a night at Tortoni</span> looks like
+          </h2>
+        </div>
+        <div
+          className="relative aspect-video rounded-lg overflow-hidden"
+          style={{ boxShadow: "var(--shadow-elev-3)" }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/IdSkcKQpzwU"
+            title="Sensaciones de Tango — Tango Show at Café Tortoni"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full border-0"
+          />
         </div>
       </div>
     </section>
@@ -1003,6 +1031,7 @@ function LandingEN() {
       <Reviews />
       <Schedule />
       <Show />
+      <VideoShow />
       <Consumos />
       <Guide />
       <Info />

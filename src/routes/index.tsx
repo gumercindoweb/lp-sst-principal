@@ -128,15 +128,15 @@ function Hero() {
 
       <div className="relative mx-auto max-w-5xl px-6 py-32 text-center">
         <p className="eyebrow mb-6">Café Tortoni · Buenos Aires · Desde 1858</p>
-        <h1 className="display text-5xl sm:text-6xl md:text-8xl text-white">
+        <h1 className="display text-4xl sm:text-6xl md:text-8xl text-white">
           Vive el tango
           <br />
           <span className="text-pasion">donde nació</span>
         </h1>
-        <p className="script text-4xl md:text-5xl mt-4">la historia</p>
+        <p className="script text-3xl md:text-5xl mt-4">la historia</p>
         <p className="mt-8 max-w-xl mx-auto text-white/82 text-lg leading-relaxed">
           Contada con cuerpo y alma, en el rincón más emblemático de Buenos Aires.
-          Bailarines, bandoneón y voz, a centímetros de tu mesa.
+          Bailarines, bandoneón y voz, cerca de tu mesa.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
@@ -371,6 +371,34 @@ function Show() {
               ¿Preferís que lo veamos juntos?
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function VideoShow() {
+  return (
+    <section className="section-pad bg-surface">
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="text-center mb-10">
+          <p className="eyebrow mb-4">El show en acción</p>
+          <h2 className="display text-3xl md:text-5xl">
+            Mirá cómo es{" "}
+            <span className="text-pasion">una noche en el Tortoni</span>
+          </h2>
+        </div>
+        <div
+          className="relative aspect-video rounded-lg overflow-hidden"
+          style={{ boxShadow: "var(--shadow-elev-3)" }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/IdSkcKQpzwU"
+            title="Sensaciones de Tango — Show en el Café Tortoni"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full border-0"
+          />
         </div>
       </div>
     </section>
@@ -736,6 +764,7 @@ function Landing() {
       <Reviews />
       <Schedule />
       <Show />
+      <VideoShow />
       <Consumos />
       <Guide />
       <Info />
