@@ -29,66 +29,65 @@ import gallery8 from "@/assets/gallery-8.jpg";
 
 const TICKETS = "https://tickets.sensacionesdetango.com/";
 const WHATSAPP =
-  "https://wa.me/5491150108040?text=%5BLP-EN%5D%20Hello%21%20I%20want%20to%20book%20the%20tango%20show%20at%20Caf%C3%A9%20Tortoni";
-const PT_URL = "https://lp-pt-tango-sensations-buenos-aires.vercel.app/";
+  "https://wa.me/5491150108040?text=%5BLP-PT%5D%20Ol%C3%A1%21%20Quero%20reservar%20o%20show%20de%20tango%20no%20Caf%C3%A9%20Tortoni";
 
 const FAQS = [
   {
-    q: "Is there a tango show at Café Tortoni?",
-    a: "Yes. Sensaciones de Tango presents a live tango theatrical experience at the historic Café Tortoni in Buenos Aires — dancers, bandoneón and voice just meters from your table.",
+    q: "Tem show de tango no Café Tortoni?",
+    a: "Sim. Sensaciones de Tango realiza um espetáculo de tango ao vivo no histórico Café Tortoni, em Buenos Aires — bailarinos, bandoneón e voz a poucos metros da sua mesa.",
   },
   {
-    q: "How do I book the tango show?",
-    a: "Via WhatsApp or the online ticket system on this page. We serve international visitors in English and confirm your booking within minutes.",
+    q: "Como reservar o show?",
+    a: "Pelo WhatsApp ou pelo sistema de ingressos online desta página. Atendemos turistas brasileiros em português e confirmamos sua reserva em minutos.",
   },
   {
-    q: "Do I need to book in advance?",
-    a: "Yes. Sessions have limited seats and often sell out in peak season. We recommend booking before your trip to secure your table.",
+    q: "Preciso reservar com antecedência?",
+    a: "Sim. As sessões têm lugares limitados e costumam esgotar em alta temporada. Recomendamos reservar antes da viagem para garantir sua mesa.",
   },
   {
-    q: "Is the show suitable for international visitors?",
-    a: "Absolutely. Service is available in English, Spanish and Portuguese. It's one of the most sought-after experiences by first-time visitors to Buenos Aires.",
+    q: "O show é recomendado para turistas brasileiros?",
+    a: "Totalmente. O atendimento é em português, inglês e espanhol. É uma das experiências mais procuradas por brasileiros em Buenos Aires.",
   },
   {
-    q: "Does the show include dinner?",
-    a: "The ticket does not include drinks or food. You can order from the Tortoni menu before the show begins. Payment is made on-site.",
+    q: "O show inclui jantar?",
+    a: "O ingresso não inclui consumação. Você pode pedir algo do cardápio do Tortoni antes de a apresentação começar. O pagamento é feito no local.",
   },
   {
-    q: "Where is Café Tortoni?",
-    a: "Av. de Mayo 825, in the historic center of Buenos Aires — a short walk from the Obelisco, Plaza de Mayo and the Congress building.",
+    q: "Onde fica o Café Tortoni?",
+    a: "Av. de Mayo 825, no centro histórico de Buenos Aires — a poucos minutos a pé do Obelisco, Plaza de Mayo e Avenida Corrientes.",
   },
 ];
 
-export const Route = createFileRoute("/en")({
+export const Route = createFileRoute("/pt")({
   head: () => ({
     meta: [
       {
         title:
-          "Tango Show at Café Tortoni Buenos Aires — Sensaciones de Tango",
+          "Show de Tango no Café Tortoni, Buenos Aires — Sensaciones de Tango",
       },
       {
         name: "description",
         content:
-          "Experience live tango at the historic Café Tortoni in Buenos Aires. Dancers, bandoneón and voice inches from your table. Book your show now.",
+          "Viva uma noite de tango no histórico Café Tortoni em Buenos Aires. Bailarinos, bandoneón e voz a centímetros da sua mesa. Reserve agora.",
       },
-      { name: "language", content: "en" },
+      { name: "language", content: "pt-BR" },
       {
         property: "og:title",
         content:
-          "Tango Show at Café Tortoni Buenos Aires — Sensaciones de Tango",
+          "Show de Tango no Café Tortoni, Buenos Aires — Sensaciones de Tango",
       },
       {
         property: "og:description",
         content:
-          "Experience live tango at the historic Café Tortoni in Buenos Aires. Dancers, bandoneón and voice inches from your table.",
+          "Viva uma noite de tango no histórico Café Tortoni em Buenos Aires. Bailarinos, bandoneón e voz a centímetros da sua mesa.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:locale", content: "en_US" },
+      { property: "og:locale", content: "pt_BR" },
       { property: "og:image", content: hero },
       { name: "twitter:image", content: hero },
     ],
     links: [
-      { rel: "canonical", href: "https://sensacionesdetango.com/en" },
+      { rel: "canonical", href: "https://sensacionesdetango.com/pt" },
       {
         rel: "alternate",
         hreflang: "es",
@@ -102,7 +101,7 @@ export const Route = createFileRoute("/en")({
       {
         rel: "alternate",
         hreflang: "pt-BR",
-        href: "https://lp-pt-tango-sensations-buenos-aires.vercel.app/",
+        href: "https://sensacionesdetango.com/pt",
       },
     ],
     scripts: [
@@ -123,9 +122,9 @@ export const Route = createFileRoute("/en")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Event",
-          name: "Tango Show at Café Tortoni — Sensaciones de Tango",
+          name: "Show de Tango no Café Tortoni — Sensaciones de Tango",
           description:
-            "Live tango theatrical experience at the historic Café Tortoni in Buenos Aires.",
+            "Espetáculo de tango ao vivo no histórico Café Tortoni, em Buenos Aires.",
           eventAttendanceMode:
             "https://schema.org/OfflineEventAttendanceMode",
           eventStatus: "https://schema.org/EventScheduled",
@@ -151,7 +150,7 @@ export const Route = createFileRoute("/en")({
       },
     ],
   }),
-  component: LandingEN,
+  component: LandingPT,
 });
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -178,11 +177,11 @@ function Nav() {
           <a href="#show" className="hover:text-ambar transition-colors">
             Show
           </a>
-          <a href="#schedule" className="hover:text-ambar transition-colors">
-            Schedule
+          <a href="#horarios" className="hover:text-ambar transition-colors">
+            Horários
           </a>
-          <a href="#reviews" className="hover:text-ambar transition-colors">
-            Reviews
+          <a href="#avaliacoes" className="hover:text-ambar transition-colors">
+            Avaliações
           </a>
           <a href="#info" className="hover:text-ambar transition-colors">
             Info
@@ -197,14 +196,14 @@ function Nav() {
               ES
             </a>
             <span className="text-white/20">|</span>
-            <span className="text-white font-semibold">EN</span>
-            <span className="text-white/20">|</span>
             <a
-              href="/pt"
+              href="/en"
               className="text-white/40 hover:text-ambar transition-colors"
             >
-              PT
+              EN
             </a>
+            <span className="text-white/20">|</span>
+            <span className="text-white font-semibold">PT</span>
           </div>
           <a
             href={TICKETS}
@@ -212,7 +211,7 @@ function Nav() {
             rel="noreferrer"
             className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-sm"
           >
-            Book now
+            Reservar
           </a>
           <button aria-label="Menu" className="md:hidden text-white/80">
             <MenuIcon size={22} />
@@ -232,7 +231,7 @@ function Hero() {
       <div className="absolute inset-0">
         <img
           src={hero}
-          alt="Tango dancers performing at Café Tortoni"
+          alt="Casal dançando tango no Café Tortoni"
           className="h-full w-full object-cover"
         />
         <div
@@ -251,17 +250,17 @@ function Hero() {
 
       <div className="relative mx-auto max-w-5xl px-6 py-32 text-center">
         <p className="eyebrow mb-6">
-          Café Tortoni · Buenos Aires · Since 1858
+          Café Tortoni · Buenos Aires · Desde 1858
         </p>
         <h1 className="display text-5xl sm:text-6xl md:text-8xl text-white">
-          Experience tango
+          Viva o tango
           <br />
-          <span className="text-pasion">where it was born</span>
+          <span className="text-pasion">onde ele nasceu</span>
         </h1>
-        <p className="script text-4xl md:text-5xl mt-4">the story</p>
+        <p className="script text-4xl md:text-5xl mt-4">a história</p>
         <p className="mt-8 max-w-xl mx-auto text-white/82 text-lg leading-relaxed">
-          Told with body and soul, in the most iconic corner of Buenos Aires.
-          Dancers, bandoneón and voice, inches from your table.
+          Contada com corpo e alma, no canto mais emblemático de Buenos Aires.
+          Bailarinos, bandoneón e voz, a centímetros da sua mesa.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -272,7 +271,7 @@ function Hero() {
             className="btn-whatsapp"
           >
             <WhatsAppIcon className="h-5 w-5" />
-            Book via WhatsApp
+            Reservar pelo WhatsApp
           </a>
           <a
             href={TICKETS}
@@ -280,14 +279,14 @@ function Hero() {
             rel="noreferrer"
             className="btn-ghost"
           >
-            View available shows
+            Ver espetáculos disponíveis
             <ArrowRight size={16} />
           </a>
         </div>
 
         <div className="mt-14 flex items-center justify-center gap-2 text-white/58 text-xs uppercase tracking-[0.3em]">
           <Star size={14} className="text-oro fill-oro" />
-          300+ five-star reviews on TripAdvisor
+          300+ avaliações 5 estrelas no TripAdvisor
         </div>
       </div>
     </section>
@@ -298,39 +297,39 @@ function Reviews() {
   const reviews = [
     {
       quote:
-        "Unforgettable. Tortoni at night is something else — the show moved my whole family.",
+        "Inesquecível. O Tortoni à noite é outra coisa — o show emocionou toda a minha família.",
       name: "Mariana S.",
       country: "São Paulo, BR",
     },
     {
       quote:
-        "Brought international friends and they were blown away. The closeness to the dancers makes all the difference.",
+        "Levei amigos internacionais e ficaram impressionados. A proximidade com os bailarinos faz toda a diferença.",
       name: "Diego R.",
       country: "Buenos Aires, AR",
     },
     {
       quote:
-        "The best night of our trip. Book ahead — when we arrived, it was already full.",
+        "A melhor noite da nossa viagem. Reserve com antecedência — quando chegamos, já estava lotado.",
       name: "Camila P.",
       country: "Rio de Janeiro, BR",
     },
   ];
   return (
-    <section id="reviews" className="section-pad relative">
+    <section id="avaliacoes" className="section-pad relative">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{ background: "var(--grad-spotlight)" }}
       />
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="text-center max-w-3xl mx-auto">
-          <p className="eyebrow mb-4">Why travelers recommend it</p>
+          <p className="eyebrow mb-4">Por que os viajantes recomendam</p>
           <h2 className="display text-3xl md:text-5xl">
-            Over 300 visitors rated the show with
+            Mais de 300 visitantes avaliaram o show com
             <span className="script text-ambar text-5xl md:text-6xl">
               {" "}
-              5 stars{" "}
+              5 estrelas{" "}
             </span>
-            for its authenticity
+            pela autenticidade
           </h2>
         </div>
 
@@ -363,7 +362,7 @@ function Reviews() {
             rel="noreferrer"
             className="text-ambar uppercase text-xs tracking-[0.3em] border-b border-ambar/40 pb-1 hover:border-ambar transition-colors"
           >
-            More reviews on TripAdvisor →
+            Mais avaliações no TripAdvisor →
           </a>
         </div>
       </div>
@@ -374,35 +373,37 @@ function Reviews() {
 function Schedule() {
   const days = [
     {
-      title: "Mon – Thu",
-      times: ["6:00 PM", "8:00 PM"],
-      tag: "Available",
+      title: "Seg – Qui",
+      times: ["18h", "20h"],
+      tag: "Disponível",
     },
     {
-      title: "Fri, Sat & Holidays",
-      times: ["6:00 PM", "7:00 PM", "8:00 PM"],
-      tag: "Last seats",
+      title: "Sex, Sáb e Feriados",
+      times: ["18h", "19h", "20h"],
+      tag: "Últimos lugares",
     },
     {
-      title: "Sundays",
-      times: ["No show"],
-      tag: "Closed",
+      title: "Domingos",
+      times: ["Sem espetáculo"],
+      tag: "Fechado",
       muted: true,
     },
   ];
   return (
-    <section id="schedule" className="section-pad bg-surface relative">
+    <section id="horarios" className="section-pad bg-surface relative">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center max-w-3xl mx-auto">
-          <p className="eyebrow mb-4">Online tickets · Direct purchase</p>
+          <p className="eyebrow mb-4">Ingressos online · Compra direta</p>
           <h2 className="display text-3xl md:text-5xl">
-            Choose the day and time that fits your trip
+            Escolha o dia e horário que melhor se encaixe na sua viagem
           </h2>
           <p className="mt-6 text-white/82">
-            Book your ticket simply, securely, with instant confirmation.
+            Reserve seu ingresso de forma simples, segura e com confirmação
+            imediata.
             <span className="italic text-white/58">
               {" "}
-              Limited capacity per show — we recommend booking in advance.
+              Capacidade limitada por sessão — recomendamos reservar com
+              antecedência.
             </span>
           </p>
         </div>
@@ -417,9 +418,9 @@ function Schedule() {
               <div className="flex items-center gap-2 text-xs uppercase tracking-[0.28em]">
                 <span
                   className={`h-1.5 w-1.5 rounded-full ${
-                    d.tag === "Available"
+                    d.tag === "Disponível"
                       ? "bg-whatsapp"
-                      : d.tag === "Last seats"
+                      : d.tag === "Últimos lugares"
                         ? "bg-ambar"
                         : "bg-white/30"
                   }`}
@@ -449,11 +450,13 @@ function Schedule() {
             <Clock className="text-ambar shrink-0 mt-1" size={20} />
             <div>
               <p className="eyebrow !text-[10px] !tracking-[0.28em]">
-                Doors open
+                Entrada à sala
               </p>
-              <p className="mt-1 text-white/82">45 minutes before each show.</p>
+              <p className="mt-1 text-white/82">
+                45 minutos antes de cada sessão.
+              </p>
               <p className="text-xs text-white/58 mt-2">
-                6pm → 5:15pm · 7pm → 6:15pm · 8pm → 7:15pm
+                18h → 17h15 · 19h → 18h15 · 20h → 19h15
               </p>
             </div>
           </div>
@@ -461,10 +464,10 @@ function Schedule() {
             <Users className="text-ambar shrink-0 mt-1" size={20} />
             <div>
               <p className="eyebrow !text-[10px] !tracking-[0.28em]">
-                Limited capacity
+                Capacidade limitada
               </p>
               <p className="mt-1 text-white/82">
-                Intimate venue — 80 seats per show.
+                Sala íntima — 80 pessoas por sessão.
               </p>
             </div>
           </div>
@@ -477,7 +480,7 @@ function Schedule() {
             rel="noreferrer"
             className="btn-primary"
           >
-            Choose date and book online
+            Escolher data e comprar online
           </a>
           <a
             href={WHATSAPP}
@@ -486,7 +489,7 @@ function Schedule() {
             className="btn-whatsapp"
           >
             <WhatsAppIcon className="h-5 w-5" />
-            Any questions? We're here
+            Tem dúvidas? A gente te ajuda
           </a>
         </div>
       </div>
@@ -505,33 +508,32 @@ function Show() {
           />
           <img
             src={showMain}
-            alt="Tango dancers at Café Tortoni"
+            alt="Bailarinos de tango no Café Tortoni"
             className="relative rounded-lg w-full h-[520px] object-cover"
             style={{ boxShadow: "var(--shadow-elev-3)" }}
           />
         </div>
 
         <div>
-          <p className="eyebrow mb-4">A preview of the show</p>
+          <p className="eyebrow mb-4">Uma prévia do show</p>
           <h2 className="display text-4xl md:text-6xl leading-[1.05]">
-            Lights, dance
+            Luzes, dança
+            <br />e emoção no
             <br />
-            and emotion at the
-            <br />
-            <span className="text-pasion">heart of Tortoni</span>
+            <span className="text-pasion">coração do Tortoni</span>
           </h2>
-          <p className="script text-4xl mt-2">one intimate hour</p>
+          <p className="script text-4xl mt-2">uma hora íntima</p>
           <p className="mt-6 text-white/82 leading-relaxed text-lg max-w-md">
-            An intimate evening at Café Tortoni: dancers, bandoneón and voice,
-            inches from your table. This is not a mass-market show — this is
-            tango where it was born.
+            Uma noite íntima no Café Tortoni: bailarinos, bandoneón e voz, a
+            centímetros da sua mesa. Não é um show de consumo em massa — é o
+            tango onde ele nasceu.
           </p>
 
           <ul className="mt-8 space-y-4">
             {[
-              "Service in Portuguese, English and Spanish.",
-              "60-minute show.",
-              "Priority access, no queuing (with full payment).",
+              "Atendimento em português, inglês e espanhol.",
+              "Show de 60 minutos.",
+              "Acesso prioritário sem fila (com pagamento completo).",
             ].map((item) => (
               <li key={item} className="flex gap-3 items-start">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-ambar shrink-0" />
@@ -547,7 +549,7 @@ function Show() {
               rel="noreferrer"
               className="btn-primary"
             >
-              Buy tickets
+              Comprar ingressos
             </a>
             <a
               href={WHATSAPP}
@@ -555,7 +557,7 @@ function Show() {
               rel="noreferrer"
               className="btn-ghost"
             >
-              Prefer we sort it out together?
+              Prefere a gente resolver juntos?
             </a>
           </div>
         </div>
@@ -567,39 +569,39 @@ function Show() {
 function Consumos() {
   const items = [
     {
-      title: "Order before the show",
-      body: "Orders are taken only before the show begins. Once the lights go down and the performance starts, no orders are taken so as not to interrupt the experience.",
+      title: "Pedidos antes do show",
+      body: "Os pedidos são realizados apenas antes de a apresentação começar. Assim que as luzes se apagam e o espetáculo começa, não se aceitam pedidos para não interromper a experiência.",
     },
     {
-      title: "No orders via WhatsApp",
-      body: "Service is in-person only. We don't take orders via WhatsApp — arrive early if you'd like to enjoy something from the menu before the show begins.",
+      title: "Sem pedidos pelo WhatsApp",
+      body: "O serviço é presencial. Não tomamos pedidos pelo WhatsApp — chegue com antecedência se quiser aproveitar algo do cardápio antes do início.",
     },
     {
-      title: "Full Tortoni menu",
-      body: "You'll find exactly the same menu and service as in the main Tortoni hall — coffees, drinks, classic cocktails and sweet options.",
+      title: "O mesmo cardápio do salão principal",
+      body: "Você encontrará exatamente o mesmo menu e o mesmo atendimento que no salão principal do Tortoni — cafés, bebidas, drinques clássicos e opções doces.",
     },
     {
-      title: "Ticket does not include drinks",
-      body: "Your ticket covers the show only. If you'd like to order anything, you do so directly with the Tortoni team before the show begins.",
+      title: "O ingresso não inclui consumação",
+      body: "O valor do seu ingresso corresponde apenas ao show. Se quiser pedir algo, faça diretamente com a equipe do Tortoni antes de a apresentação começar.",
     },
   ];
   return (
     <section className="section-pad bg-surface">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center max-w-3xl mx-auto">
-          <p className="eyebrow mb-4">Your experience, at your pace</p>
+          <p className="eyebrow mb-4">Sua experiência, no seu ritmo</p>
           <h2 className="display text-3xl md:text-5xl">
-            Drinks & snacks{" "}
-            <span className="text-pasion">during the show</span>
+            Consumos durante{" "}
+            <span className="text-pasion">o show</span>
           </h2>
           <p className="mt-6 text-white/82">
-            During the show we offer the same café service as in the main
-            Tortoni hall.
+            Durante o show oferecemos o mesmo serviço de cafeteria do salão
+            principal do Café Tortoni.
             <span className="text-white">
               {" "}
-              We just ask that you respect the timing
+              Só pedimos que respeite os horários
             </span>{" "}
-            so the performance can be fully enjoyed.
+            para que a apresentação possa ser vivida com toda a sua intensidade.
           </p>
           <a
             href="https://www.cafetortoni.com.ar/index.php/cafe-hoy/gastronomia"
@@ -607,7 +609,7 @@ function Consumos() {
             rel="noreferrer"
             className="mt-6 inline-flex items-center gap-2 text-ambar uppercase text-xs tracking-[0.3em] border-b border-ambar/40 pb-1 hover:border-ambar"
           >
-            <Coffee size={14} /> View Tortoni menu
+            <Coffee size={14} /> Ver cardápio do Tortoni
           </a>
         </div>
 
@@ -638,16 +640,16 @@ function Guide() {
       />
       <div className="relative mx-auto max-w-4xl px-6 text-center">
         <p className="eyebrow mb-4">
-          A clear, direct guide in your language · ES · EN · PT
+          Um guia claro, direto e no seu idioma · ES · EN · PT
         </p>
         <h2 className="display text-3xl md:text-5xl">
-          Everything you need to know
+          Tudo o que você precisa saber
           <br />
-          <span className="text-pasion">about the show</span>
+          <span className="text-pasion">sobre o show</span>
         </h2>
         <p className="mt-6 text-white/82 text-lg max-w-2xl mx-auto">
-          So you can enjoy the best tango experience in Buenos Aires with no
-          confusion or surprises. An intimate theatrical performance.
+          Para que você viva a melhor experiência de tango em Buenos Aires, sem
+          confusões nem surpresas. Um espetáculo íntimo e inesquecível.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a
@@ -656,7 +658,7 @@ function Guide() {
             rel="noreferrer"
             className="btn-ghost"
           >
-            Download free guide
+            Baixar guia gratuito
           </a>
           <a
             href={TICKETS}
@@ -664,7 +666,7 @@ function Guide() {
             rel="noreferrer"
             className="btn-primary"
           >
-            Buy tickets now
+            Comprar ingressos agora
           </a>
         </div>
       </div>
@@ -680,18 +682,18 @@ function Info() {
           className="rounded-lg p-10 bg-raised border border-bordo/30"
           style={{ boxShadow: "var(--shadow-elev-2)" }}
         >
-          <p className="eyebrow mb-4">What's included in</p>
-          <h3 className="display text-3xl md:text-4xl">Your ticket</h3>
+          <p className="eyebrow mb-4">Isso é o que</p>
+          <h3 className="display text-3xl md:text-4xl">Inclui o seu ingresso</h3>
           <ul className="mt-8 space-y-5">
             {[
               {
                 icon: <Users size={18} />,
-                t: "Service in Portuguese, English and Spanish.",
+                t: "Atendimento em português, inglês e espanhol.",
               },
-              { icon: <Clock size={18} />, t: "60-minute show." },
+              { icon: <Clock size={18} />, t: "Show de 60 minutos." },
               {
                 icon: <ArrowRight size={18} />,
-                t: "Priority access, no queuing (with full payment).",
+                t: "Acesso prioritário sem fila (com pagamento completo).",
               },
             ].map((x, i) => (
               <li key={i} className="flex items-start gap-4">
@@ -706,7 +708,7 @@ function Info() {
             rel="noreferrer"
             className="btn-primary mt-10"
           >
-            Buy tickets now
+            Comprar ingressos agora
           </a>
         </div>
 
@@ -714,8 +716,8 @@ function Info() {
           className="rounded-lg p-10 bg-raised border border-white/5"
           style={{ boxShadow: "var(--shadow-elev-2)" }}
         >
-          <p className="eyebrow mb-4">Keep in mind these</p>
-          <h3 className="display text-3xl md:text-4xl">Important details</h3>
+          <p className="eyebrow mb-4">Tenha em mente estes</p>
+          <h3 className="display text-3xl md:text-4xl">Dados importantes</h3>
           <ul className="mt-8 space-y-5">
             {[
               {
@@ -724,11 +726,11 @@ function Info() {
               },
               {
                 icon: <Clock size={18} />,
-                t: "Doors open 45 min before the show.",
+                t: "Entrada à sala 45 min antes do show.",
               },
               {
                 icon: <Users size={18} />,
-                t: "Limited capacity — 80 seats per show.",
+                t: "Capacidade limitada — 80 pessoas por sessão.",
               },
             ].map((x, i) => (
               <li key={i} className="flex items-start gap-4">
@@ -743,7 +745,7 @@ function Info() {
             rel="noreferrer"
             className="btn-ghost mt-10"
           >
-            <MapPin size={16} /> How to get there
+            <MapPin size={16} /> Como chegar
           </a>
         </div>
       </div>
@@ -753,9 +755,9 @@ function Info() {
           className="rounded-lg p-10 border border-pasion/30 bg-gradient-to-b from-bordo-deep/40 to-transparent"
           style={{ boxShadow: "var(--glow-red)" }}
         >
-          <p className="eyebrow mb-3">Limited capacity per show</p>
+          <p className="eyebrow mb-3">Capacidade limitada por sessão</p>
           <h3 className="display text-2xl md:text-3xl">
-            Book before you arrive in Buenos Aires
+            Reserve antes de chegar em Buenos Aires
           </h3>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <a
@@ -764,7 +766,7 @@ function Info() {
               rel="noreferrer"
               className="btn-whatsapp"
             >
-              <WhatsAppIcon className="h-5 w-5" /> Book via WhatsApp
+              <WhatsAppIcon className="h-5 w-5" /> Reservar pelo WhatsApp
             </a>
             <a
               href={TICKETS}
@@ -772,7 +774,7 @@ function Info() {
               rel="noreferrer"
               className="btn-primary"
             >
-              Buy tickets now
+              Comprar ingressos agora
             </a>
           </div>
         </div>
@@ -785,33 +787,33 @@ function Payments() {
   const methods = [
     {
       icon: <Banknote size={20} />,
-      title: "Cash in your currency",
-      body: "We accept Argentine pesos, US dollars, euros and Brazilian reais. Ideal if you want to pay instantly with no fuss.",
+      title: "Dinheiro na sua moeda",
+      body: "Aceitamos pesos argentinos, dólares, reais e euros. Ideal para pagar sem burocracia e na hora.",
     },
     {
       icon: <CreditCard size={20} />,
-      title: "Debit & credit cards",
-      body: "Pay directly at the Tortoni with any enabled card. Practical and secure for international visitors.",
+      title: "Cartões de débito e crédito",
+      body: "Pague diretamente no Tortoni com qualquer cartão habilitado. Prático e seguro para turistas.",
     },
     {
       icon: <CreditCard size={20} />,
-      title: "Bank transfer (ARS only)",
-      body: "Available in Argentine pesos only. Recommended for local residents or those with an Argentine bank account.",
+      title: "Transferência (só ARS)",
+      body: "Disponível apenas em pesos argentinos. Recomendado para residentes locais ou quem tem conta argentina.",
     },
     {
       icon: <Banknote size={20} />,
-      title: "PIX (cash at Tortoni only)",
-      body: "For visitors from Brazil: PIX is available in person at the Tortoni café only.",
+      title: "PIX (presencial no Tortoni)",
+      body: "Para visitantes do Brasil: PIX disponível apenas presencialmente na cafeteria do Tortoni.",
     },
   ];
   return (
     <section className="section-pad">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center max-w-3xl mx-auto">
-          <p className="eyebrow mb-4">How can you pay?</p>
+          <p className="eyebrow mb-4">Como você pode pagar?</p>
           <h2 className="display text-3xl md:text-5xl">
-            Easy <span className="script text-ambar text-5xl">&</span> secure
-            payment
+            Pagamento fácil{" "}
+            <span className="script text-ambar text-5xl">e</span> seguro
           </h2>
         </div>
 
@@ -841,7 +843,7 @@ function Payments() {
             rel="noreferrer"
             className="btn-whatsapp"
           >
-            <WhatsAppIcon className="h-5 w-5" /> Book via WhatsApp
+            <WhatsAppIcon className="h-5 w-5" /> Reservar pelo WhatsApp
           </a>
           <a
             href={TICKETS}
@@ -849,7 +851,7 @@ function Payments() {
             rel="noreferrer"
             className="btn-primary"
           >
-            View shows and buy online
+            Ver espetáculos e comprar online
           </a>
         </div>
       </div>
@@ -872,9 +874,9 @@ function Gallery() {
     <section className="section-pad bg-surface">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center max-w-3xl mx-auto">
-          <p className="eyebrow mb-4">Some of our</p>
+          <p className="eyebrow mb-4">Alguns dos</p>
           <h2 className="display text-3xl md:text-5xl">
-            Artists <span className="text-pasion">on stage</span>
+            Artistas <span className="text-pasion">em cena</span>
           </h2>
         </div>
 
@@ -887,7 +889,7 @@ function Gallery() {
             >
               <img
                 src={p.src}
-                alt={`Artist ${i + 1}`}
+                alt={`Artista ${i + 1}`}
                 className={`w-full ${i === 0 ? "h-[400px] md:h-[640px]" : "h-[260px] md:h-[310px]"} object-cover ${p.pos} transition-transform duration-700 group-hover:scale-105`}
                 loading="lazy"
               />
@@ -911,13 +913,13 @@ function Footer() {
             className="h-28 w-auto"
           />
           <p className="mt-6 text-white/58 text-sm leading-relaxed max-w-xs">
-            Experience tango where it was born. An intimate show at the heart
-            of Café Tortoni.
+            Viva o tango onde ele nasceu. Um espetáculo íntimo no coração do
+            Café Tortoni.
           </p>
         </div>
 
         <div>
-          <p className="eyebrow !text-[10px]">Visit us</p>
+          <p className="eyebrow !text-[10px]">Nos visite</p>
           <a
             href="https://maps.app.goo.gl/8X1vysiPN1yWvmdf9"
             target="_blank"
@@ -929,12 +931,12 @@ function Footer() {
           </a>
           <p className="mt-4 flex items-start gap-3 text-white/82">
             <Calendar size={18} className="text-ambar shrink-0 mt-1" />
-            Mon to Sat · Closed Sundays
+            Seg a Sáb · Fechado domingos
           </p>
         </div>
 
         <div>
-          <p className="eyebrow !text-[10px]">Follow us</p>
+          <p className="eyebrow !text-[10px]">Nos siga</p>
           <div className="mt-3 flex gap-3">
             {[
               {
@@ -969,7 +971,7 @@ function Footer() {
             className="mt-6 inline-flex items-center gap-2 text-whatsapp text-sm"
           >
             <WhatsAppIcon className="h-4 w-4" />
-            Need help? Write to us
+            Precisa de ajuda? Nos escreva
           </a>
         </div>
       </div>
@@ -990,7 +992,7 @@ function FloatingWhatsApp() {
       href={WHATSAPP}
       target="_blank"
       rel="noreferrer"
-      aria-label="Book via WhatsApp"
+      aria-label="Reservar pelo WhatsApp"
       className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-whatsapp flex items-center justify-center text-noir hover:scale-110 transition-transform"
       style={{ boxShadow: "var(--glow-green)" }}
     >
@@ -999,7 +1001,7 @@ function FloatingWhatsApp() {
   );
 }
 
-function LandingEN() {
+function LandingPT() {
   return (
     <main className="bg-noir text-white overflow-x-hidden">
       <Nav />

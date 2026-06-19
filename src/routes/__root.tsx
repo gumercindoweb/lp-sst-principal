@@ -94,7 +94,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "alternate", hreflang: "es", href: "https://lp-sst-principal.vercel.app/" },
       { rel: "alternate", hreflang: "en", href: "https://lp-sst-principal.vercel.app/en" },
-      { rel: "alternate", hreflang: "pt-BR", href: "https://lp-pt-tango-sensations-buenos-aires.vercel.app/" },
+      { rel: "alternate", hreflang: "pt-BR", href: "https://sensacionesdetango.com/pt" },
     ],
   }),
 

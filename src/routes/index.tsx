@@ -79,7 +79,7 @@ function Nav() {
             <span className="text-white/20">|</span>
             <a href="/en" className="text-white/40 hover:text-ambar transition-colors">EN</a>
             <span className="text-white/20">|</span>
-            <a href={PT_URL} target="_blank" rel="noreferrer" className="text-white/40 hover:text-ambar transition-colors">PT</a>
+            <a href="/pt" className="text-white/40 hover:text-ambar transition-colors">PT</a>
           </div>
           <a href={TICKETS} target="_blank" rel="noreferrer" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-sm">
             Reservar
