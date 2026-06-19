@@ -308,11 +308,11 @@ function Schedule() {
         <div className="mt-8 max-w-3xl mx-auto rounded-lg bg-noir/40 border border-white/5 p-6">
           <p className="eyebrow !text-[10px] !tracking-[0.28em] mb-3">Dos espacios del Café Tortoni</p>
           <p className="text-white/75 text-sm leading-relaxed">
-            Las funciones de las 18:00 y 20:00 hs. se realizan en las{" "}
-            <span className="text-ambar">bodegas históricas del subsuelo</span>—espacios íntimos
-            con acceso por escaleras. La función de las 19:00 hs. (viernes, sábados y feriados)
-            se realiza en el <span className="text-ambar">salón principal</span> a nivel calle
-            y es la única apta para personas con movilidad reducida.
+            Las funciones de las 18:00 y 20:00 hs. se realizan en la{" "}
+            <span className="text-ambar">bodega histórica del subsuelo</span>—con acceso por
+            escaleras. La función de las 19:00 hs. (viernes, sábados y feriados) se realiza en
+            el <span className="text-ambar">salón principal</span> a nivel calle y es la única
+            apta para personas con movilidad reducida.
           </p>
         </div>
 

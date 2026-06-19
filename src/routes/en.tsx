@@ -471,10 +471,10 @@ function Schedule() {
           <p className="eyebrow !text-[10px] !tracking-[0.28em] mb-3">Two spaces at Café Tortoni</p>
           <p className="text-white/75 text-sm leading-relaxed">
             The 18:00 and 20:00 shows take place in the{" "}
-            <span className="text-ambar">historic wine cellars</span> in the basement—intimate
-            spaces accessible by stairs only. The 19:00 show (Fridays, Saturdays and holidays)
-            is held in the <span className="text-ambar">main hall</span>, at street level,
-            and is the only one suitable for guests with reduced mobility.
+            <span className="text-ambar">historic wine cellar</span> in the basement—accessible
+            by stairs only. The 19:00 show (Fridays, Saturdays and holidays) is held in the{" "}
+            <span className="text-ambar">main hall</span>, at street level, and is the only one
+            suitable for guests with reduced mobility.
           </p>
         </div>
 

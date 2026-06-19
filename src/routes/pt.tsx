@@ -473,11 +473,11 @@ function Schedule() {
         <div className="mt-8 max-w-3xl mx-auto rounded-lg bg-noir/40 border border-white/5 p-6">
           <p className="eyebrow !text-[10px] !tracking-[0.28em] mb-3">Dois espaços do Café Tortoni</p>
           <p className="text-white/75 text-sm leading-relaxed">
-            Os espetáculos das 18:00 e 20:00 hs. acontecem nas{" "}
-            <span className="text-ambar">adegas históricas do subsolo</span>—espaços íntimos
-            com acesso apenas por escadas. O espetáculo das 19:00 hs. (sextas, sábados e
-            feriados) acontece no <span className="text-ambar">salão principal</span> ao nível
-            da rua, e é o único indicado para pessoas com mobilidade reduzida.
+            Os espetáculos das 18:00 e 20:00 hs. acontecem na{" "}
+            <span className="text-ambar">adega histórica do subsolo</span>—com acesso apenas
+            por escadas. O espetáculo das 19:00 hs. (sextas, sábados e feriados) acontece no{" "}
+            <span className="text-ambar">salão principal</span> ao nível da rua, e é o único
+            indicado para pessoas com mobilidade reduzida.
           </p>
         </div>
 
