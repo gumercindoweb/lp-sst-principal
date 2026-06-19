@@ -17,7 +17,7 @@ const CANONICAL_URL = "https://sensacionesdetango.com/es/show-de-tango-cafe-tort
 const FAQS = [
   {
     q: "¿Hay show de tango en el Café Tortoni?",
-    a: "Sí. Sensaciones de Tango presenta una experiencia teatral con tango en vivo en el histórico Café Tortoni de Buenos Aires — bailarines, bandoneón y cantor a pocos metros de tu mesa.",
+    a: "Sí. Sensaciones de Tango presenta una experiencia teatral con tango en vivo en el histórico Café Tortoni de Buenos Aires — bailarines, bombos y cantor a pocos metros de tu mesa.",
   },
   {
     q: "¿Cómo reservar el show de tango en el Café Tortoni?",
@@ -211,6 +211,7 @@ function Hero() {
           height={1100}
         />
       </picture>
+      <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.4)" }} />
       <div className="absolute inset-0 bg-scrim-bottom" />
       <div className="absolute inset-0 bg-spotlight opacity-70" />
 
@@ -233,7 +234,7 @@ function Hero() {
 
           <p className="font-display italic text-xl sm:text-2xl text-secondary-w max-w-2xl mt-6 leading-snug">
             Una noche íntima de tango en el café más histórico de Argentina —
-            bailarines, bandoneón y voz en vivo, a pocos metros de tu mesa.
+            bailarines, bombos y voz en vivo, a pocos metros de tu mesa.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 mt-9">
@@ -391,7 +392,7 @@ function TheShow() {
           <p className="text-secondary-w text-lg max-w-2xl">
             Una noche pensada para quienes viajan a Buenos Aires y quieren más
             que una foto en la fachada: música en vivo, danza en el piso de
-            madera, voz y bandoneón a centímetros del público.
+            madera, voz y bombos a centímetros del público.
           </p>
         </div>
 
@@ -409,7 +410,7 @@ function TheShow() {
             <div className="absolute bottom-6 left-6 right-6">
               <span className="badge badge-available">En vivo</span>
               <p className="font-display text-2xl mt-3 text-primary-w">
-                Voz, danza y bandoneón
+                Voz, danza y bombos
               </p>
             </div>
           </div>
@@ -573,7 +574,7 @@ function DayAndNight() {
             <Moment
               label="Noche"
               title="Experiencia teatral con tango en vivo"
-              text="El mismo espacio, ahora con luz baja, bandoneón y danza a pocos metros. Reserva con antelación."
+              text="El mismo espacio, ahora con luz baja, bombos y danza a pocos metros. Reserva con antelación."
               highlight
             />
           </div>

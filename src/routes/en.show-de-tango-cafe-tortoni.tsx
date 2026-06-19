@@ -17,7 +17,7 @@ const CANONICAL_URL = "https://sensacionesdetango.com/en/show-de-tango-cafe-tort
 const FAQS = [
   {
     q: "Is there a tango show at Café Tortoni?",
-    a: "Yes. Sensaciones de Tango presents a live tango theatrical experience at the historic Café Tortoni in Buenos Aires — dancers, bandoneón and singer just meters from your table.",
+    a: "Yes. Sensaciones de Tango presents a live tango theatrical experience at the historic Café Tortoni in Buenos Aires — dancers, drums and singer just meters from your table.",
   },
   {
     q: "How do I book the tango show at Café Tortoni?",
@@ -211,6 +211,7 @@ function Hero() {
           height={1100}
         />
       </picture>
+      <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.4)" }} />
       <div className="absolute inset-0 bg-scrim-bottom" />
       <div className="absolute inset-0 bg-spotlight opacity-70" />
 
@@ -233,7 +234,7 @@ function Hero() {
 
           <p className="font-display italic text-xl sm:text-2xl text-secondary-w max-w-2xl mt-6 leading-snug">
             An intimate tango night at Argentina's most historic café —
-            dancers, bandoneón and live vocals, just meters from your table.
+            dancers, drums and live vocals, just meters from your table.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 mt-9">
@@ -390,7 +391,7 @@ function TheShow() {
           </h2>
           <p className="text-secondary-w text-lg max-w-2xl">
             An evening designed for visitors who want more than a photo on the
-            facade: live music, dance on wooden floors, voice and bandoneón
+            facade: live music, dance on wooden floors, voice and drums
             centimeters from the audience.
           </p>
         </div>
@@ -399,7 +400,7 @@ function TheShow() {
           <div className="lg:col-span-2 relative rounded-lg overflow-hidden">
             <img
               src={bandoneonImg}
-              alt="Bandoneón player performing live at the tango show"
+              alt="Drums player performing live at the tango show"
               className="w-full h-full object-cover min-h-[420px]"
               loading="lazy"
               width={1200}
@@ -409,7 +410,7 @@ function TheShow() {
             <div className="absolute bottom-6 left-6 right-6">
               <span className="badge badge-available">Live</span>
               <p className="font-display text-2xl mt-3 text-primary-w">
-                Voice, dance and bandoneón
+                Voice, dance and drums
               </p>
             </div>
           </div>
@@ -573,7 +574,7 @@ function DayAndNight() {
             <Moment
               label="Night"
               title="Live tango theatrical experience"
-              text="The same space, now dimly lit, with bandoneón and dance just meters away. Book in advance."
+              text="The same space, now dimly lit, with drums and dance just meters away. Book in advance."
               highlight
             />
           </div>
