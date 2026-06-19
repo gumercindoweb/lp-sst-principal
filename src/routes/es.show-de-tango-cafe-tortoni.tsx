@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroImg from "@/assets/hero-seo.jpg";
+import heroMobileImg from "@/assets/gla-fla.jpg";
 import tortoniImg from "@/assets/tortoni-interior.jpg";
 import salonCafeImg from "@/assets/salon-cafe.jpg";
 import bandoneonImg from "@/assets/show-singer.jpg";
@@ -200,13 +201,16 @@ function Nav() {
 function Hero() {
   return (
     <section id="top" className="relative min-h-[100svh] flex items-end overflow-hidden">
-      <img
-        src={heroImg}
-        alt="Pareja bailando tango en el Café Tortoni"
-        className="absolute inset-0 w-full h-full object-cover"
-        width={1920}
-        height={1100}
-      />
+      <picture>
+        <source media="(max-width: 767px)" srcSet={heroMobileImg} />
+        <img
+          src={heroImg}
+          alt="Pareja bailando tango en el Café Tortoni"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1920}
+          height={1100}
+        />
+      </picture>
       <div className="absolute inset-0 bg-scrim-bottom" />
       <div className="absolute inset-0 bg-spotlight opacity-70" />
 
