@@ -29,6 +29,7 @@ import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
+import logoTortoni from "@/assets/logo-tortoni.png";
 
 const TICKETS = "https://tickets.sensacionesdetango.com/";
 const WHATSAPP =
@@ -1034,11 +1035,30 @@ function FloatingWhatsApp() {
   );
 }
 
+function TortoniAuthority() {
+  return (
+    <div className="py-8 border-y border-white/6 bg-surface/40">
+      <div className="mx-auto max-w-5xl px-6 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
+        <img
+          src={logoTortoni}
+          alt="Café Tortoni — Buenos Aires"
+          className="h-12 w-auto rounded-md opacity-90"
+        />
+        <div className="text-center sm:text-left">
+          <p className="eyebrow !text-[10px] mb-1">Realizado exclusivamente no</p>
+          <p className="text-white/50 text-sm">Buenos Aires · Fundado em 1858 · O café mais icônico da Argentina</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function LandingPT() {
   return (
     <main className="bg-noir text-white overflow-x-hidden">
       <Nav />
       <Hero />
+      <TortoniAuthority />
       <Reviews />
       <Schedule />
       <Show />
