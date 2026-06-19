@@ -92,9 +92,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Sacramento&display=swap",
       },
-      { rel: "alternate", hreflang: "es", href: "https://lp-sst-principal.vercel.app/" },
-      { rel: "alternate", hreflang: "en", href: "https://lp-sst-principal.vercel.app/en" },
-      { rel: "alternate", hreflang: "pt-BR", href: "https://sensacionesdetango.com/pt" },
     ],
   }),
 
