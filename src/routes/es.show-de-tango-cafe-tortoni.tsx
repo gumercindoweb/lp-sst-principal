@@ -232,7 +232,7 @@ function Hero() {
             </span>
           </h1>
 
-          <p className="font-display italic text-xl sm:text-2xl text-secondary-w max-w-2xl mt-6 leading-snug">
+          <p className="script text-2xl sm:text-3xl text-secondary-w max-w-2xl mt-6 leading-snug">
             Una noche íntima de tango en el café más histórico de Argentina —
             bailarines, bombos y voz en vivo, a pocos metros de tu mesa.
           </p>
