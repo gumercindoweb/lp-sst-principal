@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Calendar,
@@ -13,6 +14,7 @@ import {
   Facebook,
   Youtube,
   Menu as MenuIcon,
+  X,
 } from "lucide-react";
 
 import logo from "@/assets/logo.webp";
@@ -61,8 +63,9 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-noir/60 border-b border-white/5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-noir/60 backdrop-blur-md border-b border-white/5">
       <div className="mx-auto max-w-7xl px-5 md:px-10 h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <img src={logo} alt="Sensaciones de Tango" className="h-16 w-auto" />
@@ -81,14 +84,34 @@ function Nav() {
             <span className="text-white/20">|</span>
             <a href="/pt" className="text-white/40 hover:text-ambar transition-colors">PT</a>
           </div>
-          <a href={TICKETS} target="_blank" rel="noreferrer" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-sm">
+          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-sm">
             Reservar
           </a>
-          <button aria-label="Menu" className="md:hidden text-white/80">
-            <MenuIcon size={22} />
+          <button onClick={() => setMenuOpen(v => !v)} aria-label="Menu" className="md:hidden text-white/80">
+            {menuOpen ? <X size={22} /> : <MenuIcon size={22} />}
           </button>
         </div>
       </div>
+      {menuOpen && (
+        <div className="md:hidden border-t border-white/5 px-5 py-6 flex flex-col gap-5">
+          <nav className="flex flex-col gap-4 text-[11px] uppercase tracking-[0.28em] text-white/70">
+            <a href="#show" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Show</a>
+            <a href="#funciones" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Funciones</a>
+            <a href="#resenas" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Reseñas</a>
+            <a href="#info" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Info</a>
+          </nav>
+          <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.28em]">
+            <span className="text-white font-semibold">ES</span>
+            <span className="text-white/20">|</span>
+            <a href="/en" className="text-white/40 hover:text-ambar transition-colors">EN</a>
+            <span className="text-white/20">|</span>
+            <a href="/pt" className="text-white/40 hover:text-ambar transition-colors">PT</a>
+          </div>
+          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="btn-primary !py-2.5 !px-5 !text-sm self-start">
+            Reservar
+          </a>
+        </div>
+      )}
     </header>
   );
 }
@@ -116,15 +139,21 @@ function Hero() {
           Bailarines, bandoneón y voz, a centímetros de tu mesa.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="btn-whatsapp">
-            <WhatsAppIcon className="h-5 w-5" />
-            Reservar por WhatsApp
-          </a>
-          <a href={TICKETS} target="_blank" rel="noreferrer" className="btn-ghost">
-            Ver funciones disponibles
-            <ArrowRight size={16} />
-          </a>
+        <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
+          <div className="flex flex-col items-center gap-2">
+            <a href={TICKETS} target="_blank" rel="noreferrer" className="btn-primary">
+              Comprar ticket ahora
+              <ArrowRight size={16} />
+            </a>
+            <p className="text-white/50 text-xs tracking-wider">Solo 3 minutos · Confirmación inmediata · Sin filas</p>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="btn-whatsapp">
+              <WhatsAppIcon className="h-5 w-5" />
+              Reservar por WhatsApp
+            </a>
+            <p className="text-white/50 text-xs tracking-wider">Atención en tu idioma · Respondemos en menos de 1 hora</p>
+          </div>
         </div>
 
         <div className="mt-14 flex items-center justify-center gap-2 text-white/58 text-xs uppercase tracking-[0.3em]">

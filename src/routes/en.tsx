@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Calendar,
@@ -13,6 +14,7 @@ import {
   Facebook,
   Youtube,
   Menu as MenuIcon,
+  X,
 } from "lucide-react";
 
 import logo from "@/assets/logo.webp";
@@ -168,57 +170,55 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-noir/60 border-b border-white/5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-noir/60 backdrop-blur-md border-b border-white/5">
       <div className="mx-auto max-w-7xl px-5 md:px-10 h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <img src={logo} alt="Sensaciones de Tango" className="h-16 w-auto" />
         </a>
         <nav className="hidden md:flex items-center gap-9 text-[11px] uppercase tracking-[0.28em] text-white/70">
-          <a href="#show" className="hover:text-ambar transition-colors">
-            Show
-          </a>
-          <a href="#schedule" className="hover:text-ambar transition-colors">
-            Schedule
-          </a>
-          <a href="#reviews" className="hover:text-ambar transition-colors">
-            Reviews
-          </a>
-          <a href="#info" className="hover:text-ambar transition-colors">
-            Info
-          </a>
+          <a href="#show" className="hover:text-ambar transition-colors">Show</a>
+          <a href="#schedule" className="hover:text-ambar transition-colors">Schedule</a>
+          <a href="#reviews" className="hover:text-ambar transition-colors">Reviews</a>
+          <a href="#info" className="hover:text-ambar transition-colors">Info</a>
         </nav>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.28em]">
-            <a
-              href="/"
-              className="text-white/40 hover:text-ambar transition-colors"
-            >
-              ES
-            </a>
+            <a href="/" className="text-white/40 hover:text-ambar transition-colors">ES</a>
             <span className="text-white/20">|</span>
             <span className="text-white font-semibold">EN</span>
             <span className="text-white/20">|</span>
-            <a
-              href="/pt"
-              className="text-white/40 hover:text-ambar transition-colors"
-            >
-              PT
-            </a>
+            <a href="/pt" className="text-white/40 hover:text-ambar transition-colors">PT</a>
           </div>
-          <a
-            href={TICKETS}
-            target="_blank"
-            rel="noreferrer"
-            className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-sm"
-          >
+          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-sm">
             Book now
           </a>
-          <button aria-label="Menu" className="md:hidden text-white/80">
-            <MenuIcon size={22} />
+          <button onClick={() => setMenuOpen(v => !v)} aria-label="Menu" className="md:hidden text-white/80">
+            {menuOpen ? <X size={22} /> : <MenuIcon size={22} />}
           </button>
         </div>
       </div>
+      {menuOpen && (
+        <div className="md:hidden border-t border-white/5 px-5 py-6 flex flex-col gap-5">
+          <nav className="flex flex-col gap-4 text-[11px] uppercase tracking-[0.28em] text-white/70">
+            <a href="#show" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Show</a>
+            <a href="#schedule" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Schedule</a>
+            <a href="#reviews" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Reviews</a>
+            <a href="#info" onClick={() => setMenuOpen(false)} className="hover:text-ambar transition-colors">Info</a>
+          </nav>
+          <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.28em]">
+            <a href="/" className="text-white/40 hover:text-ambar transition-colors">ES</a>
+            <span className="text-white/20">|</span>
+            <span className="text-white font-semibold">EN</span>
+            <span className="text-white/20">|</span>
+            <a href="/pt" className="text-white/40 hover:text-ambar transition-colors">PT</a>
+          </div>
+          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="btn-primary !py-2.5 !px-5 !text-sm self-start">
+            Book now
+          </a>
+        </div>
+      )}
     </header>
   );
 }
@@ -264,25 +264,21 @@ function Hero() {
           Dancers, bandoneón and voice, inches from your table.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-whatsapp"
-          >
-            <WhatsAppIcon className="h-5 w-5" />
-            Book via WhatsApp
-          </a>
-          <a
-            href={TICKETS}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-ghost"
-          >
-            View available shows
-            <ArrowRight size={16} />
-          </a>
+        <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
+          <div className="flex flex-col items-center gap-2">
+            <a href={TICKETS} target="_blank" rel="noreferrer" className="btn-primary">
+              Buy your ticket now
+              <ArrowRight size={16} />
+            </a>
+            <p className="text-white/50 text-xs tracking-wider">Just 3 minutes · Instant confirmation · No queues</p>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="btn-whatsapp">
+              <WhatsAppIcon className="h-5 w-5" />
+              Book via WhatsApp
+            </a>
+            <p className="text-white/50 text-xs tracking-wider">Support in your language · We reply within the hour</p>
+          </div>
         </div>
 
         <div className="mt-14 flex items-center justify-center gap-2 text-white/58 text-xs uppercase tracking-[0.3em]">
