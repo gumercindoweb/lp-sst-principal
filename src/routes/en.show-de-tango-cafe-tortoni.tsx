@@ -5,6 +5,7 @@ import tortoniImg from "@/assets/tortoni-interior.jpg";
 import bandoneonImg from "@/assets/show-singer.jpg";
 import coupleImg from "@/assets/tango-couple.jpg";
 import logoImg from "@/assets/logo.webp";
+import logoTortoni from "@/assets/logo-tortoni.png";
 
 const WHATSAPP_URL = "https://wa.me/5491150108040?text=%5BLP-EN-SST%5D%20Hello!%20I%20want%20to%20book%20the%20tango%20show%20at%20Caf%C3%A9%20Tortoni.";
 const TICKETS_URL = "https://tickets.sensacionesdetango.com/";
@@ -771,12 +772,31 @@ function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
 
 /* ---------- Page ---------- */
 
+function TortoniAuthority() {
+  return (
+    <div className="py-8 border-y border-white/6 bg-surface/40">
+      <div className="mx-auto max-w-5xl px-6 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
+        <img
+          src={logoTortoni}
+          alt="Café Tortoni — Buenos Aires"
+          className="h-12 w-auto rounded-md opacity-90"
+        />
+        <div className="text-center sm:text-left">
+          <p className="eyebrow !text-[10px] mb-1">Performed exclusively at</p>
+          <p className="text-white/50 text-sm">Buenos Aires · Founded in 1858 · Argentina's most iconic café</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function TangoLandingEN() {
   return (
     <div className="bg-noir text-primary-w">
       <Nav />
       <main>
         <Hero />
+        <TortoniAuthority />
         <QuickAnswers />
         <SocialProof />
         <WhyTortoni />
