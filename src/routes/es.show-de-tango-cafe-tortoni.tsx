@@ -367,7 +367,7 @@ function WhyTortoni() {
 function TheShow() {
   const elements = [
     { t: "Danza", d: "Parejas de tango en vivo en estilo tradicional argentino." },
-    { t: "Música", d: "Bandoneón, piano y violín interpretando los clásicos del género." },
+    { t: "Música", d: "El espectáculo fusiona tango con un vibrante cuadro folclórico argentino. Percusión, bombos y cajón peruano acompañan la fuerza del malambo y las boleadoras, transmitiendo toda la tradición en escena." },
     { t: "Voz", d: "Cantores porteños interpretando a Gardel, Piazzolla y contemporáneos." },
     { t: "Escenario", d: "El salón histórico del Café Tortoni como escenario íntimo." },
   ];

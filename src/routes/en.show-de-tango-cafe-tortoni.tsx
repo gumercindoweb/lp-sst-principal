@@ -367,7 +367,7 @@ function WhyTortoni() {
 function TheShow() {
   const elements = [
     { t: "Dance", d: "Live tango couples performing in traditional Argentine style." },
-    { t: "Music", d: "Bandoneón, piano and violin interpreting the genre's classics." },
+    { t: "Music", d: "The show fuses tango with a vibrant Argentine folklore tableau. Percussion, drums and Peruvian cajón accompany the force of malambo and boleadoras, transmitting all tradition on stage." },
     { t: "Voice", d: "Buenos Aires singers performing Gardel, Piazzolla and contemporary tango." },
     { t: "Setting", d: "The historic Café Tortoni hall as an intimate stage." },
   ];
