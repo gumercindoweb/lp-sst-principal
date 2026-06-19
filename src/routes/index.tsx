@@ -720,7 +720,7 @@ function FloatingWhatsApp() {
       target="_blank"
       rel="noreferrer"
       aria-label="Reservar por WhatsApp"
-      className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-whatsapp flex items-center justify-center text-noir hover:scale-110 transition-transform"
+      className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-whatsapp hidden md:flex items-center justify-center text-noir hover:scale-110 transition-transform"
       style={{ boxShadow: "var(--glow-green)" }}
     >
       <WhatsAppIcon className="h-7 w-7" />
