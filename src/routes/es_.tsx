@@ -41,7 +41,7 @@ export const Route = createFileRoute("/es")({
       {
         name: "description",
         content:
-          "Show íntimo de tango en el Café Tortoni de Buenos Aires. Bailarines, bandoneón y voz a centímetros de tu mesa.",
+          "Show íntimo de tango en el Café Tortoni de Buenos Aires. Bailarines, bombos y voz a centímetros de tu mesa.",
       },
       { property: "og:title", content: "Sensaciones de Tango — Café Tortoni" },
       {
@@ -145,7 +145,7 @@ function Hero() {
         <p className="script text-3xl md:text-5xl mt-4">la historia</p>
         <p className="mt-8 max-w-xl mx-auto text-white/82 text-lg leading-relaxed">
           Contada con cuerpo y alma, en el rincón más emblemático de Buenos Aires.
-          Bailarines, bandoneón y voz, cerca de tu mesa.
+          Bailarines, bombos y voz, cerca de tu mesa.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
@@ -365,7 +365,7 @@ function Show() {
           </h2>
           <p className="script text-4xl mt-2">una hora íntima</p>
           <p className="mt-6 text-white/82 leading-relaxed text-lg max-w-md">
-            Una noche íntima en el Café Tortoni: bailarines, bandoneón y voz, a
+            Una noche íntima en el Café Tortoni: bailarines, bombos y voz, a
             centímetros de tu mesa. No es un show de consumo masivo — es el tango
             donde nació.
           </p>

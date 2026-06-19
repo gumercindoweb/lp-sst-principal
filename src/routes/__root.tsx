@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Sensaciones de Tango — Vive el tango donde nació · Café Tortoni" },
-      { name: "description", content: "Show íntimo de tango en el Café Tortoni de Buenos Aires. Bailarines, bandoneón y voz a centímetros de tu mesa. Reservá tu función." },
+      { name: "description", content: "Show íntimo de tango en el Café Tortoni de Buenos Aires. Bailarines, bombos y voz a centímetros de tu mesa. Reservá tu función." },
       { property: "og:title", content: "Sensaciones de Tango — Café Tortoni, Buenos Aires" },
       { property: "og:description", content: "Vive el tango donde nació. Show íntimo en el corazón del Café Tortoni." },
       { property: "og:type", content: "website" },

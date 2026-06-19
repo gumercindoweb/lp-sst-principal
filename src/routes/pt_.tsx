@@ -38,7 +38,7 @@ const WHATSAPP =
 const FAQS = [
   {
     q: "Tem show de tango no Café Tortoni?",
-    a: "Sim. Sensaciones de Tango realiza um espetáculo de tango ao vivo no histórico Café Tortoni, em Buenos Aires — bailarinos, bandoneón e voz a poucos metros da sua mesa.",
+    a: "Sim. Sensaciones de Tango realiza um espetáculo de tango ao vivo no histórico Café Tortoni, em Buenos Aires — bailarinos, tambores e voz a poucos metros da sua mesa.",
   },
   {
     q: "Como reservar o show?",
@@ -72,7 +72,7 @@ export const Route = createFileRoute("/pt")({
       {
         name: "description",
         content:
-          "Viva uma noite de tango no histórico Café Tortoni em Buenos Aires. Bailarinos, bandoneón e voz a centímetros da sua mesa. Reserve agora.",
+          "Viva uma noite de tango no histórico Café Tortoni em Buenos Aires. Bailarinos, tambores e voz a centímetros da sua mesa. Reserve agora.",
       },
       { name: "language", content: "pt-BR" },
       {
@@ -83,7 +83,7 @@ export const Route = createFileRoute("/pt")({
       {
         property: "og:description",
         content:
-          "Viva uma noite de tango no histórico Café Tortoni em Buenos Aires. Bailarinos, bandoneón e voz a centímetros da sua mesa.",
+          "Viva uma noite de tango no histórico Café Tortoni em Buenos Aires. Bailarinos, tambores e voz a centímetros da sua mesa.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
@@ -252,7 +252,7 @@ function Hero() {
         <p className="script text-3xl md:text-5xl mt-4">a história</p>
         <p className="mt-8 max-w-xl mx-auto text-white/82 text-lg leading-relaxed">
           Contada com corpo e alma, no canto mais emblemático de Buenos Aires.
-          Bailarinos, bandoneón e voz, perto da sua mesa.
+          Bailarinos, tambores e voz, perto da sua mesa.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
@@ -523,7 +523,7 @@ function Show() {
           </h2>
           <p className="script text-4xl mt-2">uma hora íntima</p>
           <p className="mt-6 text-white/82 leading-relaxed text-lg max-w-md">
-            Uma noite íntima no Café Tortoni: bailarinos, bandoneón e voz, a
+            Uma noite íntima no Café Tortoni: bailarinos, tambores e voz, a
             centímetros da sua mesa. Não é um show de consumo em massa — é o
             tango onde ele nasceu.
           </p>

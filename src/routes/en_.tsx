@@ -39,7 +39,7 @@ const PT_URL = "https://lp-pt-tango-sensations-buenos-aires.vercel.app/";
 const FAQS = [
   {
     q: "Is there a tango show at Café Tortoni?",
-    a: "Yes. Sensaciones de Tango presents a live tango theatrical experience at the historic Café Tortoni in Buenos Aires — dancers, bandoneón and voice just meters from your table.",
+    a: "Yes. Sensaciones de Tango presents a live tango theatrical experience at the historic Café Tortoni in Buenos Aires — dancers, drums and voice just meters from your table.",
   },
   {
     q: "How do I book the tango show?",
@@ -73,7 +73,7 @@ export const Route = createFileRoute("/en")({
       {
         name: "description",
         content:
-          "Experience live tango at the historic Café Tortoni in Buenos Aires. Dancers, bandoneón and voice inches from your table. Book your show now.",
+          "Experience live tango at the historic Café Tortoni in Buenos Aires. Dancers, drums and voice inches from your table. Book your show now.",
       },
       { name: "language", content: "en" },
       {
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/en")({
       {
         property: "og:description",
         content:
-          "Experience live tango at the historic Café Tortoni in Buenos Aires. Dancers, bandoneón and voice inches from your table.",
+          "Experience live tango at the historic Café Tortoni in Buenos Aires. Dancers, drums and voice inches from your table.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_US" },
@@ -253,7 +253,7 @@ function Hero() {
         <p className="script text-3xl md:text-5xl mt-4">the story</p>
         <p className="mt-8 max-w-xl mx-auto text-white/82 text-lg leading-relaxed">
           Told with body and soul, in the most iconic corner of Buenos Aires.
-          Dancers, bandoneón and voice, right by your table.
+          Dancers, drums and voice, right by your table.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6">
@@ -521,7 +521,7 @@ function Show() {
           </h2>
           <p className="script text-4xl mt-2">one intimate hour</p>
           <p className="mt-6 text-white/82 leading-relaxed text-lg max-w-md">
-            An intimate evening at Café Tortoni: dancers, bandoneón and voice,
+            An intimate evening at Café Tortoni: dancers, drums and voice,
             inches from your table. This is not a mass-market show — this is
             tango where it was born.
           </p>
