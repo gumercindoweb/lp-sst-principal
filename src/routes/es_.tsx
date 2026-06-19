@@ -129,6 +129,7 @@ function Hero() {
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img src={hero} alt="Bailarines de tango en escena" className="h-full w-full object-cover" />
+        <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.35)" }} />
         <div className="absolute inset-0" style={{ background: "var(--scrim-top)" }} />
         <div className="absolute inset-0" style={{ background: "var(--scrim-bottom)" }} />
         <div className="absolute inset-0" style={{ background: "var(--grad-passion)" }} />

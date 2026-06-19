@@ -225,6 +225,7 @@ function Hero() {
           alt="Casal dançando tango no Café Tortoni"
           className="h-full w-full object-cover"
         />
+        <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.35)" }} />
         <div
           className="absolute inset-0"
           style={{ background: "var(--scrim-top)" }}
