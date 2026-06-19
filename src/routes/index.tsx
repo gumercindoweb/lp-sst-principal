@@ -29,6 +29,7 @@ import gallery8 from "@/assets/gallery-8.jpg";
 
 const TICKETS = "https://tickets.sensacionesdetango.com/";
 const WHATSAPP = "https://wa.me/5491150108040?text=LP%20COMPRAR%20TICKET";
+const PT_URL = "https://lp-pt-tango-sensations-buenos-aires.vercel.app/";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -72,12 +73,21 @@ function Nav() {
           <a href="#resenas" className="hover:text-ambar transition-colors">Reseñas</a>
           <a href="#info" className="hover:text-ambar transition-colors">Info</a>
         </nav>
-        <a href={TICKETS} target="_blank" rel="noreferrer" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-sm">
-          Reservar
-        </a>
-        <button aria-label="Menu" className="md:hidden text-white/80">
-          <MenuIcon size={22} />
-        </button>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.28em]">
+            <span className="text-white font-semibold">ES</span>
+            <span className="text-white/20">|</span>
+            <a href="/en" className="text-white/40 hover:text-ambar transition-colors">EN</a>
+            <span className="text-white/20">|</span>
+            <a href={PT_URL} target="_blank" rel="noreferrer" className="text-white/40 hover:text-ambar transition-colors">PT</a>
+          </div>
+          <a href={TICKETS} target="_blank" rel="noreferrer" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-sm">
+            Reservar
+          </a>
+          <button aria-label="Menu" className="md:hidden text-white/80">
+            <MenuIcon size={22} />
+          </button>
+        </div>
       </div>
     </header>
   );
