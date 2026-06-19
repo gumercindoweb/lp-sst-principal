@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroImg from "@/assets/hero-seo.jpg";
 import tortoniImg from "@/assets/tortoni-interior.jpg";
+import salonCafeImg from "@/assets/salon-cafe.jpg";
 import bandoneonImg from "@/assets/show-singer.jpg";
 import coupleImg from "@/assets/tango-couple.jpg";
 import logoImg from "@/assets/logo.webp";
@@ -316,15 +317,19 @@ function WhyTortoni() {
     <section className="relative py-24 lg:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-passion-glow opacity-40 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-5 lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div className="relative">
+        <div className="relative space-y-3">
           <div className="absolute -inset-4 bg-amber-rim opacity-20 blur-2xl" />
           <img
             src={tortoniImg}
             alt="Interior histórico del Café Tortoni en Buenos Aires"
-            className="relative rounded-md w-full h-auto shadow-elev-3"
+            className="relative rounded-md w-full h-64 object-cover shadow-elev-3"
             loading="lazy"
-            width={1024}
-            height={1024}
+          />
+          <img
+            src={salonCafeImg}
+            alt="Salón del Café Tortoni Buenos Aires"
+            className="relative rounded-md w-full h-48 object-cover shadow-elev-3"
+            loading="lazy"
           />
         </div>
         <div>
