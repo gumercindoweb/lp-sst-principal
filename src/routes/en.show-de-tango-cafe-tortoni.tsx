@@ -211,7 +211,7 @@ function Hero() {
           height={1100}
         />
       </picture>
-      <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.4)" }} />
+      <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.55)" }} />
       <div className="absolute inset-0 bg-scrim-bottom" />
       <div className="absolute inset-0 bg-spotlight opacity-70" />
 
@@ -227,8 +227,8 @@ function Hero() {
             <br />
             <span className="text-ambar">at Café Tortoni</span>
             <br />
-            <span className="font-script normal-case tracking-normal text-[0.55em] text-secondary-w">
-              in Buenos Aires
+            <span className="font-script normal-case tracking-normal text-[0.65em] sm:text-[0.6em] lg:text-[0.55em] text-secondary-w">
+              where tango's history with Gardel was born
             </span>
           </h1>
 
