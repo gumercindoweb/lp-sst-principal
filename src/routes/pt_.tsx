@@ -249,7 +249,7 @@ function Hero() {
           <br />
           <span className="text-pasion">onde ele nasceu</span>
         </h1>
-        <p className="script text-3xl md:text-5xl mt-4">a história</p>
+        <p className="script text-5xl sm:text-6xl md:text-7xl mt-4">a história</p>
         <p className="mt-8 max-w-xl mx-auto text-white/82 text-lg leading-relaxed">
           Contada com corpo e alma, no canto mais emblemático de Buenos Aires.
           Bailarinos, tambores e voz, perto da sua mesa.

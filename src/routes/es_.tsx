@@ -142,7 +142,7 @@ function Hero() {
           <br />
           <span className="text-pasion">donde nació</span>
         </h1>
-        <p className="script text-3xl md:text-5xl mt-4">la historia</p>
+        <p className="script text-5xl sm:text-6xl md:text-7xl mt-4">la historia</p>
         <p className="mt-8 max-w-xl mx-auto text-white/82 text-lg leading-relaxed">
           Contada con cuerpo y alma, en el rincón más emblemático de Buenos Aires.
           Bailarines, bombos y voz, cerca de tu mesa.

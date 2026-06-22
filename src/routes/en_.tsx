@@ -250,7 +250,7 @@ function Hero() {
           <br />
           <span className="text-pasion">where it was born</span>
         </h1>
-        <p className="script text-3xl md:text-5xl mt-4">the story</p>
+        <p className="script text-5xl sm:text-6xl md:text-7xl mt-4">the story</p>
         <p className="mt-8 max-w-xl mx-auto text-white/82 text-lg leading-relaxed">
           Told with body and soul, in the most iconic corner of Buenos Aires.
           Dancers, drums and voice, right by your table.
