@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 import logo from "@/assets/logo.webp";
-import hero from "@/assets/hero-impact.jpg";
+import hero from "@/assets/hero-main.jpg";
 import showMain from "@/assets/gla-fla.jpg";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
