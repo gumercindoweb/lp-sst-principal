@@ -63,7 +63,7 @@ const FAQS = [
   },
 ];
 
-export const Route = createFileRoute("/en")({
+export const Route = createFileRoute("/en_")({
   head: () => ({
     meta: [
       {

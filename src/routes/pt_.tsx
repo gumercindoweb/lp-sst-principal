@@ -62,7 +62,7 @@ const FAQS = [
   },
 ];
 
-export const Route = createFileRoute("/pt")({
+export const Route = createFileRoute("/pt_")({
   head: () => ({
     meta: [
       {
