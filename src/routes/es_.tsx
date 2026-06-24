@@ -34,7 +34,7 @@ import logoTortoni from "@/assets/logo-tortoni.png";
 const TICKETS = "https://tickets.sensacionesdetango.com/";
 const WHATSAPP = "https://wa.me/5491150108040?text=LP%20COMPRAR%20TICKET";
 
-export const Route = createFileRoute("/es")({
+export const Route = createFileRoute("/es_")({
   head: () => ({
     meta: [
       { title: "Sensaciones de Tango — Vive el tango donde nació · Café Tortoni" },
